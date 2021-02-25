@@ -1,4 +1,7 @@
-import firebase from "firebase";
+// import { seedDatabase } from "../seed";
+
+import firebaseApp from "firebase";
+
 // Utilizes dotenv to retrieve relevant keys from environmental variables
 require("dotenv").config();
 
@@ -21,7 +24,7 @@ const config = {
 };
 
 // Initialize and export firebase
-const firebaseApp = firebase.initializeApp(config);
-const { FieldValue } = firebase.firestore;
+const firebase = firebaseApp.initializeApp(config);
+const { FieldValue } = firebaseApp.firestore;
 
-export { firebaseApp, FieldValue };
+export { firebase, FieldValue };
