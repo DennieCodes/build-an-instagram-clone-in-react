@@ -1,4 +1,4 @@
-import { seedDatabase } from "../seed";
+// import { seedDatabase } from "../seed";
 
 // Utilizes dotenv to retrieve relevant keys from environmental variables
 require("dotenv").config();
@@ -30,7 +30,8 @@ const { FieldValue } = firebase.firestore;
 
 // console.log(`Field Value: ${FieldValue}`);
 
-// NOTE: After running once, remove or comment out the following command
-seedDatabase(firebase);
+// NOTE: If you want to seed your database with some initial data as per the course instruction then uncomment the following code
+//       but make sure to comment it out or remove it entirely or it will seed your database on each subsequent start.
+// seedDatabase(firebase);
 
 export { firebase, FieldValue };
