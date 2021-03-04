@@ -38,6 +38,7 @@ export default function Login() {
       <div className="flex w-3/5">
         <img src={iPhone} alt="iPhone with Instagram app" />
       </div>
+
       <div className="flex flex-col w-2/5">
         <div className="flex flex-col items-center bg-white p-4 border mb-4">
           <h1 className="flex justify-center w-full">
@@ -54,6 +55,7 @@ export default function Login() {
               aria-label="Enter your email address"
               className="text-sm w-full mr-3 py-5 px-4 h-2 border rounded mb-2"
               type="text"
+              value="emailAddress"
               placeholder="Email address"
               onChange={({ target }) => setEmailAddress(target.value)}
             />
@@ -61,6 +63,7 @@ export default function Login() {
               aria-label="Enter your password"
               className="text-sm w-full mr-3 py-5 px-4 h-2 border rounded mb-2"
               type="password"
+              value="password"
               placeholder="Password"
               onChange={({ target }) => setPassword(target.value)}
             />
