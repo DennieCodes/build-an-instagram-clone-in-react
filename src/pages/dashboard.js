@@ -11,7 +11,6 @@ export default function Dashboard() {
   return (
     <div className="bg-gray-100">
       <Header />
-      <h1>Hello from the Dashboard</h1>
     </div>
   );
 }
