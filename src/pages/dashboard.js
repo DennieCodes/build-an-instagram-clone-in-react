@@ -11,6 +11,7 @@ export default function Dashboard() {
   return (
     <div className="bg-gray-100">
       <Header />
+      <Sidebar />
     </div>
   );
 }

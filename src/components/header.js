@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+
 import FirebaseContext from "../context/firebase";
+import UserContext from "../context/user";
 
 import instagramLogo from "../images/logo.png";
 import * as ROUTES from "../constants/routes";
@@ -9,12 +11,15 @@ import testuser from "../images/avatars/testuser.jpg";
 
 export default function Header() {
   const { firebase } = useContext(FirebaseContext);
+  const { user } = useContext(UserContext);
+
+  // console.log(`Current user is: ${user.userName}`);
 
   // Check for a authorized, logged in user and offer different button options depending on user status
   let buttonOptions = "";
   // const user = firebase.auth().onAuthStateChanged((user) => user);
 
-  const user = firebase.auth().currentUser;
+  // const user = firebase.auth().currentUser;
   // Function handles when the Logout button is clicked
   const handleLogout = async () => {
     await firebase.auth().signOut();
